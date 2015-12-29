@@ -66,7 +66,7 @@ class PoniStore extends EventEmitter {
         return ((filter.color === ConstUtils.DEFAULT_SELECT_VALUE || item.color === filter.color) && (filter.type === ConstUtils.DEFAULT_SELECT_VALUE || item.kind === filter.type) && item.price >= filter.priceRange[0] && item.price <= filter.priceRange[1] && (filter.new ? item.is_new === filter.new : true))
       });
     }
-    return PoniStoreUtils.getSomeRandomPonis(myPonis);
+    return PoniStoreUtils.getSomeRandomPonis(myPonis, ConstUtils.PONI_LIST_SHOWN);
   }
   
   getFilters() {

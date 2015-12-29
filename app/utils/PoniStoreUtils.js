@@ -21,14 +21,15 @@ export default {
     }).price;
   },
   
-  getSomeRandomPonis: function(poniArray) {
+  getSomeRandomPonis: function(poniArray, poniCount) {
     let i = 0,
         l = poniArray.length,
+        minL = Math.min(poniCount, l),
         randomPonis = [],
         randomIndices = [],
         random;
     
-    while (i++ < l) {
+    while (i++ < minL) {
       while(true) {
         random = Math.floor(Math.random() * l);
         if (randomIndices.indexOf(random) === -1) {

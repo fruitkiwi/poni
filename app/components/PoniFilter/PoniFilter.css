@@ -2,6 +2,7 @@
   width: 30%;
   min-width: 500px;
   border: 1px solid #ccc;
+  text-align: left;
 }
 .poniFilter__close {
   position: absolute;
