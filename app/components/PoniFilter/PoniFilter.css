@@ -1,0 +1,44 @@
+.poniFilter {
+  width: 30%;
+  min-width: 500px;
+  border: 1px solid #ccc;
+}
+.poniFilter__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: default;
+}
+.poniFilter__block {
+  margin-top: 20px;
+}
+.poniFilter__block p, .poniFilter__input {
+  display: inline-block;
+  vertical-align: middle;
+}
+.poniFilter__block p {
+  margin: 0;
+  width: 5em;
+}
+.poniFilter__input {
+  width: 50%;
+  margin-left: 50px;
+}
+input[type="checkbox"].poniFilter__input {
+  width: 20px;
+  height: 20px;
+}
+select.poniFilter__input {
+  padding: 3px;
+}
+.poniFilter__button {
+  padding: 10px;
+  border: 1px solid #bbb;
+  background-color: white;
+}
+.poniFilter__button:active {
+  border-color: aqua;
+}
+.alignCenter {
+  text-align: center;
+}
