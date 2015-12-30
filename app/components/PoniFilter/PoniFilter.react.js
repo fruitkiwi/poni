@@ -13,8 +13,8 @@ class PoniFilter extends React.Component {
   constructor(props) {
     super(props);
     
-    let from = this.props.filters.priceRange.from,
-        to = this.props.filters.priceRange.to;
+    let from = props.filters.priceRange.from,
+        to = props.filters.priceRange.to;
     this.state = {
       priceRange: [
         from,

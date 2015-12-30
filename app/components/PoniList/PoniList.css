@@ -22,3 +22,21 @@
 .poniListBlock {
   text-align: left;
 }
+.poniList__desc {
+  font-size: 0.8em;
+  color: #bbb;
+  marin: 5px 0;
+}
+.poniList__price {
+  margin-left: 1em;
+  font-weight: bold;
+}
+.poniList__new {
+  color: burlywood;
+  margin-left: 1em;
+}
+@media only screen and (max-width: 600px) {
+  .poniListHeader {
+    margin-left: 0;
+  }
+}

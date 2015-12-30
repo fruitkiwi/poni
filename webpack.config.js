@@ -13,7 +13,7 @@ module.exports = {
         loader: 'babel',
         query: {
           presets: ['react', 'es2015'],
-          plugins: ['transform-class-properties', 'transform-function-bind'],
+          plugins: ['transform-class-properties', 'transform-function-bind', 'transform-object-assign'],
         },
         exclude: path.resolve(__dirname, 'node_modules')
       },

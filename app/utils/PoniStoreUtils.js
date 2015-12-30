@@ -1,24 +1,18 @@
 export default {
   findMinPrice: function(poniArray) {
-    return poniArray.reduce((previousValue, currentValue) => {
-      if (currentValue.price < previousValue.price) {
-        return currentValue;
-      }
-      else {
-        return previousValue;
-      }
-    }).price;
+    return Math.min.apply(null,
+                  poniArray.map(item => {
+                    return item.price
+                  })
+    );
   },
   
   findMaxPrice: function(poniArray) {
-    return poniArray.reduce((previousValue, currentValue) => {
-      if (currentValue.price > previousValue.price) {
-        return currentValue;
-      }
-      else {
-        return previousValue;
-      }
-    }).price;
+    return Math.max.apply(null,
+                         poniArray.map(item => {
+                          return item.price
+                         })
+    );
   },
   
   getSomeRandomPonis: function(poniArray, poniCount) {
@@ -30,14 +24,12 @@ export default {
         random;
     
     while (i++ < minL) {
-      while(true) {
+      do {
         random = Math.floor(Math.random() * l);
-        if (randomIndices.indexOf(random) === -1) {
-          randomPonis.push(poniArray[random]);
-          randomIndices.push(random);
-          break;
-        }
       }
+      while (randomIndices[random]);
+      randomPonis.push(poniArray[random]);
+      randomIndices[random] = true;
     }
     
     return randomPonis;

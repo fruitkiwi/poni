@@ -10,7 +10,18 @@ class PoniList extends React.Component {
         <h5 className="poniListHeader">Мои пони:</h5>
         <ul className="poniList">
           {this.props.ponis.map((item) => {
-             return <li key={item.name} className="poniList__item">{item.name}</li>
+             return (
+               <li key={item.name} className="poniList__item">
+                 {item.name}
+                 <p className="poniList__desc">
+                   {`Вид: ${item.kind} | Цвет: ${item.color}`}
+                   <span className="poniList__price">
+                     {item.price}
+                   </span>
+                   {item.is_new ? <span className="poniList__new">New!</span> : ''}
+                 </p>
+               </li>
+             )
           })}
         </ul>
       </div>;
